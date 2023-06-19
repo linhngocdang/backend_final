@@ -50,8 +50,8 @@ class Employee(models.Model):
             #img = load_img(img_path)
             # img_array = self.crop_image_from_gray(img, tol=7)
             img = load_img(img_path, target_size=(512, 512))
-            img_array = img_to_array(img)
-            #img_array = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            #img_array = img_to_array(img)
+            img_array = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
             img_array = img_array / 255.0 
             img_array = np.expand_dims(img_array, axis=0)
             model = tf.keras.models.load_model('hrd_model.h5')
