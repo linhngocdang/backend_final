@@ -1,6 +1,6 @@
 from django.db import models
 from keras.preprocessing.image import ImageDataGenerator
-# from tensorflow.keras.preprocessing.image import load_img, img_to_array
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import numpy as np
 import tensorflow as tf
 import os
