@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'rest_framework',
 ]
 
-# CORS_ORIGIN_WHITELIST = ['http://localhost:3000','https://frontend-reactjs-delta.vercel.app']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -93,7 +92,6 @@ WSGI_APPLICATION = 'djangoreactproject.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-
 
 
 # Password validation

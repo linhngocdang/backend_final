@@ -1,5 +1,6 @@
 from django.db import models
-from tensorflow.keras.preprocessing.image import load_img, img_to_array
+from keras.preprocessing.image import ImageDataGenerator
+# from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import numpy as np
 import tensorflow as tf
 import os
@@ -16,8 +17,8 @@ class Employee(models.Model):
     classified = models.CharField(max_length=200, blank=True)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
 
-    def __str__(self):
-        return self.full_name
+    # def __str__(self):
+    #     return self.full_name
 
     def save(self, *args, **kwargs):
         try:
