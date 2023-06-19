@@ -1,5 +1,5 @@
 from django.db import models
-from keras.preprocessing.image import load_img, img_to_array
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import numpy as np
 import tensorflow as tf
 import os
@@ -66,4 +66,3 @@ class Doctor(models.Model):
     full_name = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
     password = models.CharField(max_length=100)
-    
