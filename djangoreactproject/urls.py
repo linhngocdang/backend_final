@@ -26,7 +26,7 @@ urlpatterns = [
     path('', include('main.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
-# urlpatterns = [
-#     path('admin/', admin.site.urls),
-#     path('', include('main.urls')),
-# ]+staticfiles_urlpatterns(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('main.urls')),
+]+staticfiles_urlpatterns()
