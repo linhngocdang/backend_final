@@ -17,7 +17,6 @@ class Employee(models.Model):
     classified = models.CharField(max_length=200, blank=True)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
 
-
     def save(self, *args, **kwargs):
         try:
             model_file = 'hrd_model.h5'
@@ -30,7 +29,7 @@ class Employee(models.Model):
                 print("Model file does not exist.")
             img_path = self.featured_img.path
             img = load_img(img_path, target_size=(512, 512))
-            img_array = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            #img_array = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
             img_array = img_to_array(img)
             img_array = img_array / 255.0 
             img_array = np.expand_dims(img_array, axis=0)
