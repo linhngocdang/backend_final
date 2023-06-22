@@ -22,7 +22,7 @@ class Employee(models.Model):
     def save(self, *args, **kwargs):
         try:
             model_file = 'modelResnet.json'
-            weights_file = 'hrd_model.h5'
+            weights_file = 'modelResnet.h5'
             model_path = os.path.join(os.getcwd(), model_file)
             weights_path = os.path.join(os.getcwd(), weights_file)
             print('Saving employee:', self.full_name)
