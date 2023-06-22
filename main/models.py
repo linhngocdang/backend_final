@@ -15,7 +15,8 @@ class Employee(models.Model):
     birthday = models.CharField(max_length=20, null=True, blank=True)
     featured_img = models.ImageField()
     classified = models.CharField(max_length=200, blank=True)
-
+    updated = models.DateTimeField(auto_now=True, auto_now_add=False)
+    
     def __str__(self):
         return self.full_name
 
